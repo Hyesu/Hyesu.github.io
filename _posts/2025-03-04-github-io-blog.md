@@ -61,9 +61,6 @@ Jekyll은 제킬이라고 읽으며, 지킬 앤 하이드에서 따왔다고 함
 - 스킨 적용
     - `_config.yml`에 `minimal_mistakes_skin`를 key로 값을 써야함
     - [minimal mistakes 스킨 목록](https://github.com/mmistakes/minimal-mistakes?tab=readme-ov-file#skins-color-variations)
-- custom override 적용하기
-    1. `_assets/css` 폴더에 `custom.css` 파일 생성하고 override하고 싶은 것들을 작성
-    2. `_config.yml` 파일에 커스텀 파일을 추가
 
 
 #### Trouble Shooting
@@ -107,3 +104,6 @@ your-repository/
     ---
     여기부터 본문
     ```
+
+## 다음에 해보면 좋을 것..
+- 사이드 바를 만들고, 카테고리 만들기
