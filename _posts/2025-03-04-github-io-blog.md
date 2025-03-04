@@ -56,10 +56,12 @@ Jekyll은 제킬이라고 읽으며, 지킬 앤 하이드에서 따왔다고 함
 
 ### 테마 적용하기
 - [minimal mistakes 테마 가이드](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#gem-based-method)
-    - Gem-bases method를 따라하면됨
+    - Gem-based method를 따라하면 쉬움
 - 스킨 적용
     - `_config.yml`에 `minimal_mistakes_skin`를 key로 값을 써야함
     - [minimal mistakes 스킨 목록](https://github.com/mmistakes/minimal-mistakes?tab=readme-ov-file#skins-color-variations)
+- Gem-based method를 사용하는 경우 github에서 host해주는 url로 확인하면 테마가 적용이 안됨.. 
+    - `_config.yml`에 remote_theme을 이용하는 방식으로 설정하라고 함
 
 
 ## 기본적인 폴더 구조
