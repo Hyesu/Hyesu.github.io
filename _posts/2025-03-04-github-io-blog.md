@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "github.io로 블로그 만들기"
 date: 2025-03-04
 ---
@@ -55,22 +54,34 @@ Jekyll은 제킬이라고 읽으며, 지킬 앤 하이드에서 따왔다고 함
         ```
     - 브라우저로 `http://localhost:4000`을 통해 미리보기
 
+### 테마 적용하기
+- [minimal mistakes 테마 가이드](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#gem-based-method)
+    - Gem-bases method를 따라하면됨
+- 스킨 적용
+    - `_config.yml`에 `minimal_mistakes_skin`를 key로 값을 써야함
+    - [minimal mistakes 스킨 목록](https://github.com/mmistakes/minimal-mistakes?tab=readme-ov-file#skins-color-variations)
 
-# 기본적인 폴더 구조
+
+## 기본적인 폴더 구조
 ```
 your-repository/
 │
 ├── _config.yml
 ├── _posts/
-│   ├── example-post.md
+│   ├── YYYY-MM-DD-title-of-post-with-dash.md
 ├── _layouts/
 │   └── default.html
 ├── index.md
 └── other files...
 ```
 
-## _config.yml
+### _config.yml
 - Jekyll 블로그의 설정 파일로, 사이트 제목, URL, 레이아웃 등을 정의
 
-## index.md
+### index.md
 - 홈페이지
+
+### _posts
+- 포스트들이 속한 폴더로 포스트의 이름 포맷은 다음과 같음
+    - YYYY-MM-DD-{title}.md
+    - 모두 대시(-)로만 구분함
