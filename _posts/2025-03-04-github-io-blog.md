@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "github.io로 블로그 만들기"
 date: 2025-03-04
 ---
@@ -60,8 +61,18 @@ Jekyll은 제킬이라고 읽으며, 지킬 앤 하이드에서 따왔다고 함
 - 스킨 적용
     - `_config.yml`에 `minimal_mistakes_skin`를 key로 값을 써야함
     - [minimal mistakes 스킨 목록](https://github.com/mmistakes/minimal-mistakes?tab=readme-ov-file#skins-color-variations)
-- Gem-based method를 사용하는 경우 github에서 host해주는 url로 확인하면 테마가 적용이 안됨.. 
+- custom override 적용하기
+    1. `_assets/css` 폴더에 `custom.css` 파일 생성하고 override하고 싶은 것들을 작성
+    2. `_config.yml` 파일에 커스텀 파일을 추가
+
+
+#### Trouble Shooting
+1. Gem-based method를 사용하는 경우 github에서 host해주는 url로 확인하면 테마가 적용이 안됨.
     - `_config.yml`에 remote_theme을 이용하는 방식으로 설정하라고 함
+
+2. 개별 post에서 테마 적용안됨
+    - `layout: default`이 빠져 있어서 그러함
+    - 포스트 파일 최상단 프로퍼티 부분에 레이아웃을 명시해야 함
 
 
 ## 기본적인 폴더 구조
@@ -87,3 +98,12 @@ your-repository/
 - 포스트들이 속한 폴더로 포스트의 이름 포맷은 다음과 같음
     - YYYY-MM-DD-{title}.md
     - 모두 대시(-)로만 구분함
+- 파일 상단은 `---`를 통해 메타 데이터를 설정하게 되어 있음
+    ```md
+    ---
+    layout: default
+    title: "github.io로 블로그 만들기"
+    date: 2025-03-04
+    ---
+    여기부터 본문
+    ```
