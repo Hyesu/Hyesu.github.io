@@ -81,6 +81,7 @@ your-repository/
 │   ├── YYYY-MM-DD-title-of-post-with-dash.md
 ├── _layouts/
 │   └── default.html
+├── assets/
 ├── index.md
 └── other files...
 ```
@@ -104,6 +105,14 @@ your-repository/
     ---
     여기부터 본문
     ```
+
+## 포스트에 이미지 삽입하기
+- 마크다운 문서이므로 기본적인 이미지 삽입 문법은 마크다운을 따름
+    ```md
+    ![대체 텍스트](이미지 경로)
+    ```
+- 이미지는 `assets` 하위에 배치하되, 이미지 경로에는 `/assets/...`로 삽입해야 함
+
 
 ## 다음에 해보면 좋을 것..
 - 사이드 바를 만들고, 카테고리 만들기
