@@ -1,3 +1,10 @@
+---
+layout: default
+title: "작업일지::2D 스켈레탈 캐릭터 만들기"
+date: 2025-05-05
+categories: [neon]
+---
+
 ## 캐릭터 애셋 준비
 1. 각 파츠가 레이어로 분리된 psd 파일 준비
 2. 유니티 패키지 매니저에서 2D PSD Importer와 2D Animation 패키지 활성화

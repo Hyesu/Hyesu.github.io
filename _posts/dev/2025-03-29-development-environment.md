@@ -1,3 +1,10 @@
+---
+layout: default
+title: "라이더 관련 설정"
+date: 2025-03-29
+categories: [dev]
+---
+
 # 개발 환경 구축
 
 ## 라이더
