@@ -23,3 +23,4 @@ categories: [neon]
 
 ## 애니메이션 작업
 1. 애셋을 씬에 배치하고 애니메이션 창을 열어서 한땀한땀 본에 대한 키프레임 잡아준다.
+    - ![idle 모션](/assets/images/2d-project-character-03.gif)
