@@ -66,6 +66,18 @@ categories: [salmon]
         - Units를 통해 깊이값에 대한 힌트를 줄 수 있으나, 너무 큰 값은 권장되지 않는다고 함
 - ![해결하였다](/assets/images/construction-zfighting-2.gif)
 
+## Trouble Shooting
+### 설치 모드에서 제거 모드로 넘어갈 때 삭제 되상이 된 preview object가 트레이싱되면서 missing reference이 발생한다.
+- `Object.Destroy(gameObject)`를 한다고 바로 삭제되는 것이 아니기 때문에, 삭제 모드에서 즉시 호버되는 오브젝트를 트레이싱하면서 문제가 발생함
+    - Object.Destroy는 렌더가 끝나고 나서야 실제로 파괴되며, 파괴되기 전까지는 collider가 유효하기 때문에 Raycast로 검출되는 것
+    - `Object.DestroyImmediate(gameObject)`를 호출하여 즉시 삭제하면 문제가 해결되지만, 유니티에서 비권장하는 방법이라고 함
+- 가장 간단한 해결법으로는 `gameObject.SetActive(false)`를 호출해서 비활성화하는 것
+
+
+### UI 버튼을 클릭할 때에도 3d world를 클릭했다고 인식하여, 프랍을 배치하려고 함
+- `EventSystem.current.IsPointerOverGameObject()`를 통해 UI 클릭인지 알 수 있음
+
+
 
 ## 참고: Unity 기본 렌더 큐 순서
 
@@ -105,6 +117,9 @@ categories: [salmon]
 | **용도**         | HUD, UI, 이펙트, 마커, 투명 오브젝트 등 | 일반 3D 모델, 캐릭터, 배경 오브젝트 등    |
 | **셰이더 구조**     | 단순함                         | Unity의 표준 라이팅 파이프라인 사용      |
 
+
+## 1차 작업 완료!
+![완.료.](/assets/images/construction-complete-1.gif)
 
 
 ## 여담
