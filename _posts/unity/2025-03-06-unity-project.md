@@ -31,32 +31,10 @@ categories: [unity]
         - Local packages
         - Registry packages
 
-# 탑뷰 카메라로 프로젝트 생성
-- 카메라 오브젝트 인스펙터 값 설정
-    - Camera.Projection = Orthographic
-        - 탑 다운으로 볼 때 왜곡을 없애기 위함    
-    - Camera.Size = 보이는 화면의 절반 높이(유닛 기준)
-    - Transform
-        - 직교로 내려다보는 세팅
-            - Position = (0, 10, 0)
-            - Rotation = (90, 0, 0)
-        - 45도 비틀어서 내려다보는 세팅        
-            - Position = (0, 10, 0)
-            - Rotation = (30, 45, 0)
-
 # 셀과 디버깅용 라인 렌더
 - 디버깅 기능이 필요할 때 구현 예정
 - Gizmo를 이용해서 하는 방법이 나을 것 같음
     - 안그러면 라인별로 게임 오브젝트를 만들어야 되는지도..? 건설 작업할 때 다시 확인해볼 예정
-
-# 마우스 호버되는 곳의 월드 좌표 가져오기
-1. `Camara.main.ScreenPointToRay(Input.mousePosition)`을 통해 Ray를 획득
-2. 획득한 Ray를 터레인에 `Pysics.Raycast`하여 히트 지점을 획득
-    - Pysics.Raycast(ray, out var hit, 1000.0f, terrainMask)
-    - terrainMask = LayerMask.GetMask("Terrain")
-    - scene에 Layer=Terrain로 지정된 게임 오브젝트(aka.터레인)가 필요함
-        - Terrain 컴포넌트 가지고 있음
-        - Terrain Collider 컴포넌트 가지고 있음
 
 # Quad와 Plane의 차이?
 - 얼핏 바닥을 표현하기에는 plane이 적절하다고 생각되지만 실제 프로토타이핑하려고 보면 plane은 상당히 크다.
