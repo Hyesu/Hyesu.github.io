@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "작업일지::2D 스켈레탈 캐릭터 만들기"
+title: "유니티::2D 스켈레탈 캐릭터 만들기"
 date: 2025-05-05
-categories: [neon]
+categories: [unity]
 ---
 
 ## 캐릭터 애셋 준비

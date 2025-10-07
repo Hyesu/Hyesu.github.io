@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "작업일지::2D 스프라이트 캐릭터 만들기"
+title: "유니티::2D 스프라이트 캐릭터 만들기"
 date: 2025-03-11
-categories: [neon]
+categories: [unity]
 ---
 
 # 스프라이트 캐릭터
